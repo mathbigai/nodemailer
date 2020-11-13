@@ -18,7 +18,7 @@ app.post('/enviarContato', upload.single('anexo'), (req, res, next) => {
     const celular = req.body.celular;
     const cidade = req.body.cidade;
     const unidade = req.body.unidade;
-    require("./nodemail.js")(email, nome, comentario, celular, cidade, unidade)
+    require("./nodemail")(email, nome, comentario, celular, cidade, unidade)
         .then(response => res.json(response))
         .catch(error => res.json(error));
 })
@@ -32,7 +32,7 @@ app.post('/enviarOrcamentoLacerda', upload.single('anexo'), (req, res, next) => 
     const valorMedio = req.body.valorMedio;
     const tipoCliente = req.body.tipoCliente;
     const anexo = req.file;
-    require("./nodemailLacerda.js")(email, nome, celular, cidade, unidade, valorMedio, anexo, tipoCliente)
+    require("./nodemailLacerda")(email, nome, celular, cidade, unidade, valorMedio, anexo, tipoCliente)
         .then(response => res.json(response))
         .catch(error => res.json(error));
 })
