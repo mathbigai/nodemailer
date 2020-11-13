@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node api",
-    "build": "react-scripts build"
+    "start": "node api"
   },
   "author": "Issidios Tecnologia",
   "license": "ISC",
