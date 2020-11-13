@@ -38,5 +38,4 @@ app.post('/enviarOrcamentoLacerda', upload.single('anexo'), (req, res, next) => 
 })
 
 const server = http.createServer(app); 
-server.listen(3030);
-console.log("Servidor escutando na porta 3030...")
+server.listen(process.env.PORT || 3030);
